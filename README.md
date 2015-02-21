@@ -1,0 +1,1 @@
+Esta aplicación es un ejemplo de cómo utilizar los Flavors de Android Studio para crear dos versiones de la misma aplicación, por ejemplo una gratuita y una de pago
