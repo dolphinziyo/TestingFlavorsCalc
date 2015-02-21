@@ -1,4 +1,4 @@
-package com.dolphinziyo.android.testingflavorscalcfree;
+package com.dolphinziyo.android.testingflavorscalc;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class MainActivity extends ActionBarActivity implements View.OnClickListener{
+public class MainActivity extends ActionBarActivity implements View.OnClickListener {
     Button btnEntrar, btnSalir;
 
     @Override
@@ -17,8 +17,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnEntrar = (Button)findViewById(R.id.btn_entrar_calculadora);
-        btnSalir = (Button)findViewById(R.id.btn_salir);
+        btnEntrar = (Button) findViewById(R.id.btn_entrar_calculadora);
+        btnSalir = (Button) findViewById(R.id.btn_salir);
 
         btnEntrar.setOnClickListener(this);
         btnSalir.setOnClickListener(this);
@@ -49,13 +49,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if(v == btnEntrar){
-        //    if(BuildConfig.FLAVOR.equals("free")){
-                startActivity(new Intent(this, VentanaCalculadora.class));
-         //   }else{
-          //      startActivity(new Intent(this, com.dolphinziyo.android.testingflavorscalcfree.VentanaCalculadora.class));
-           // }
-        }else if(v == btnSalir){
+        if (v == btnEntrar) {
+            startActivity(new Intent(this, VentanaCalculadora.class));
+        } else if (v == btnSalir) {
             finish();
         }
     }

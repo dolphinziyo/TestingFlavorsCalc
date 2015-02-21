@@ -1,4 +1,4 @@
-package com.dolphinziyo.android.testingflavorscalcfree;
+package com.dolphinziyo.android.testingflavorscalc;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

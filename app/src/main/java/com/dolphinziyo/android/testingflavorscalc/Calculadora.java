@@ -1,8 +1,11 @@
-package com.dolphinziyo.android.testingflavorscalcfree;
+package com.dolphinziyo.android.testingflavorscalc;
 
 /**
- * Created by Alberto on 19/02/2015.
+ * Creado por dolphinziyo el 19/02/2015.
+ * http://www.tecnogame.org
+ * http://twitter.com/dolphinziyo
  */
+
 public class Calculadora {
     double num1, num2;
 

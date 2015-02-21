@@ -1,4 +1,4 @@
-package com.dolphinziyo.android.testingflavorscalcfree;
+package com.dolphinziyo.android.testingflavorscalc;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,10 +8,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 /**
- * Created by Alberto on 19/02/2015.
+ * Creado por dolphinziyo el 19/02/2015.
+ * http://www.tecnogame.org
+ * http://twitter.com/dolphinziyo
  */
+
 public class VentanaCalculadora extends Activity implements View.OnClickListener{
-    Button btnSumar, btnRestar, btnMultiplicar, btnDividir;
+    Button btnSumar, btnRestar;
     EditText etNum1, etNum2;
     TextView tvResultado, tvOperacion;
 
@@ -22,14 +25,6 @@ public class VentanaCalculadora extends Activity implements View.OnClickListener
 
         btnSumar = (Button)findViewById(R.id.btn_sumar);
         btnRestar = (Button)findViewById(R.id.btn_restar);
-
-        if(BuildConfig.FLAVOR.equals("pro")){
-            btnMultiplicar = (Button)findViewById(R.id.btn_multiplicar);
-            btnDividir = (Button)findViewById(R.id.btn_dividir);
-
-            btnMultiplicar.setOnClickListener(this);
-            btnDividir.setOnClickListener(this);
-        }
 
         btnSumar.setOnClickListener(this);
         btnRestar.setOnClickListener(this);
@@ -65,12 +60,6 @@ public class VentanaCalculadora extends Activity implements View.OnClickListener
         }else if(v == btnRestar){
             tvResultado.setText("" + calc.restar());
             tvOperacion.setText(getResources().getString(R.string.restar));
-        }else if(v == btnMultiplicar){
-            tvResultado.setText("" + calc.multiplicar());
-            tvOperacion.setText(getResources().getString(R.string.multiplicar));
-        }else if(v == btnDividir){
-            tvResultado.setText("" + calc.dividir());
-            tvOperacion.setText(getResources().getString(R.string.dividir));
         }
     }
 }
